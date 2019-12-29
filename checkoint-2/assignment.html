@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Hello World</title>
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        //App component
+        function Intro() {
+            return (
+                <React.Fragment>
+                    <header>
+                        <img src={`https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg`} alt={`Image of Sally Student`} />
+                        <div>
+                            <h1>Sally Student</h1>
+                            <address>
+                                <p>123 Address Drive <br />
+                                Cityville, US 12345</p>
+                                <p>Phone: <a href={`tel:+12345678901`}>1-234-567-8901</a></p>
+                                <p>Email: <a href={`mailto:sstudent123@email.com`}>sstudent123@email.com</a></p>
+                            </address>
+                        </div>
+                    </header>
+                    <main></main>
+                </React.Fragment>
+            );
+        }
+        function EdAndEmp() {
+            return (
+                <React.Fragment>
+                    <section>
+                        <h2>Education</h2>
+                        <ul>
+                            <li>
+                            <p>Southern Illinois University Edwardsville: Bachelors of Fine Arts</p>
+                            <address>State Route 157, Edwardsville, Illinois 62026</address>
+                            <p>September 2006 - May 2010</p>
+                            </li>
+                            <li>
+                            <p>Lewis and Clark Community College: Associates in Science</p>
+                            <address>5800 Godfrey Road, Godfrey, Illinois 62035</address>
+                            <p>September 2005 - May 2006</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Employment</h2>
+                        <ul>
+                            <li>
+                                <p>Something Design Agency</p>
+                                <p>Lead Web Designer</p>
+                                <p>August 2010 - Feb 2012</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa</p>
+                            </li>
+                            <li>
+                                <p>Yadda Marketing</p>
+                                <p>Web Designer/Developer</p>
+                                <p>Feb 2012 - May 2015</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa</p>
+                            </li>
+                        </ul>
+                    </section>
+                </React.Fragment>
+            );
+        }
+        function ResumeMe() {
+            return (
+                <React.Fragment>
+                    <Intro />
+                    <EdAndEmp />
+                </React.Fragment>
+            );
+        }
+        
+        //Use App Component: insert the App's element tree into the #application-root
+        ReactDOM.render(
+            <ResumeMe />, 
+            document.querySelector('#application-root')
+        );
+    </script>
+</body>
+</html>
